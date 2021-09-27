@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_length_email">50</integer>
+    <integer name="max_length_password">30</integer>
+    <integer name="max_length_description">200</integer>
+    <integer name="max_length_price">9</integer>
+    <integer name="max_length_percent">6</integer>
+
+    <integer name="count_pos_span_items">5</integer>
+    <integer name="count_more_items">3</integer>
+    <integer name="count_custom_amount_items">1</integer>
+    <integer name="max_length_name">50</integer>
+    <integer name="max_length_note">250</integer>
+</resources>

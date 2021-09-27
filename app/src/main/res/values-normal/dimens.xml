@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_card_item">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="size_header">32sp</dimen>
+    <dimen name="size_title">18sp</dimen>
+    <dimen name="size_big">18sp</dimen>
+    <dimen name="size_medium">16sp</dimen>
+    <dimen name="size_small">14sp</dimen>
+    <dimen name="size_body">12sp</dimen>
+    <dimen name="size_circle">58dp</dimen>
+    <dimen name="size_toolbar_title">24sp</dimen>
+    <dimen name="size_keypad_title">24sp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_xlarge">15dp</dimen>
+
+    <dimen name="image_product_size">56dp</dimen>
+    <dimen name="image_category_item_size">45dp</dimen>
+    <dimen name="size_icon_refund">16dp</dimen>
+    <dimen name="image_pos_product_size">70dp</dimen>
+    <dimen name="image_product_create_size">100dp</dimen>
+    <dimen name="percent_layout">0.9</dimen>
+    <dimen name="percent_layout_1">0.9</dimen>
+    <dimen name="percent_layout_2">1</dimen>
+</resources>

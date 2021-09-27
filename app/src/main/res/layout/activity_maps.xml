@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="magma.global.task.presentation.map.MapsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".presentation.map.MapsActivity" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edt_search"
+            style="@style/MaterialEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:autofillHints="@string/app_name"
+            android:background="@drawable/bg_edt_search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/spacing_icon_padding"
+            android:hint="@string/search"
+            android:inputType="textPersonName"
+            android:padding="@dimen/spacing_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_my_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:src="@drawable/ic_my_location"
+            app:tint="@color/purple_500"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/fab_nearby_restaurants"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_nearby_restaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:src="@drawable/ic_restaurant"
+            app:tint="@color/purple_500"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/edt_search"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/purple_500"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_location"
+            style="@style/MaterialMenuCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/spacing_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/spacing_large">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_location"
+                    android:layout_width="@dimen/image_pos_product_size"
+                    android:layout_height="@dimen/image_pos_product_size"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/bg_edt_search"
+                    android:layout_margin="@dimen/spacing_large"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_title"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_distance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_title"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateTint="@color/purple_500"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_title"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_distance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_title"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_title"
+                    style="@style/MaterialTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_icon_padding"
+                    android:layout_marginBottom="@dimen/spacing_icon_padding"
+                    tools:text="@string/app_name"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_status"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_location"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_status"
+                    style="@style/MaterialTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/quantum_googgreen"
+                    tools:text="@string/app_name"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_distance"
+                    app:layout_constraintStart_toStartOf="@+id/txt_title"
+                    app:layout_constraintEnd_toStartOf="@+id/txt_status_details"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_title"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_status_details"
+                    style="@style/MaterialTextViewBodyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    tools:text="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_status"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_status"
+                    app:layout_constraintTop_toTopOf="@+id/txt_status"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_distance"
+                    style="@style/MaterialTextViewBodyStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_60"
+                    tools:text="@string/app_name"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_show_directions"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/txt_status"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_status"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_show_directions"
+                    style="@style/MaterialButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    app:backgroundTint="@color/purple_500"
+                    android:text="@string/show_directions"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

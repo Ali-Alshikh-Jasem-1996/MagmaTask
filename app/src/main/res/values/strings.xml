@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Magma Task</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="search">Write Place to Search…</string>
+    <string name="default_info_title">Beriut</string>
+    <string name="default_info_snippet">Lenabon Capital</string>
+    <string name="pick_place">Pick Place</string>
+    <string name="show_directions">Show Directions</string>
+    <string name="title_activity_admob">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <!-- -
+        This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!--<string name="interstitial_ad_unit_id">ca-app-pub-2559564046715323~6653115980</string>-->
+    <string name="unknown_error">unknown error</string>
+    <string name="no_internet">no internet</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="places">
+        <item>Grand Kadri Hotel By Cristal Lebanon</item>
+        <item>Germanos - Pastry</item>
+        <item>Malak el Tawook</item>
+        <item>Z Burger House</item>
+        <item>Collège Oriental</item>
+        <item>VERO MODA</item>
+    </string-array>
+</resources>
