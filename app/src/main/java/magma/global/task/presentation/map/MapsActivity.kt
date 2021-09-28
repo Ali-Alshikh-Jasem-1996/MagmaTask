@@ -284,13 +284,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                     .fitCenter()
                                     .into(binding.imgLocation)
 
-                                map!!.addPolyline(
+                                /*map!!.addPolyline(
                                     PolylineOptions()
                                         .add(LatLng(lastKnownLocation?.latitude!!, lastKnownLocation?.longitude!!),
                                             LatLng(place.geometry?.location?.lat!!, place.geometry?.location?.lng!!))
                                         .width(15f)
                                         .color(Color.GREEN)
-                                )
+                                )*/
                             }
 
                         }
